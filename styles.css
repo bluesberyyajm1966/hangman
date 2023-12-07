@@ -1,55 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
 }
 
-h1 {
-    color: #1E88E5;
+#wordDisplay {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-label {
-    margin-top: 10px;
-}
-
-#category-select {
-    padding: 5px;
-    margin-bottom: 20px;
-}
-
-#word-display {
-    font-size: 24px;
-    margin: 20px 0;
-}
-
-#wrong-letters {
-    color: #FF5252;
-    margin-bottom: 10px;
-}
-
-#guesses-left {
-    font-size: 18px;
-}
-
-#letter-input {
-    margin-top: 10px;
-    padding: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.hangman-part {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #333333;
-    margin: 0 5px;
-}
-
-#hangman-visual {
-    margin-top: 20px;
+#letters {
+  font-size: 20px;
+  margin-top: 20px;
 }
