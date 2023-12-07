@@ -1,11 +1,20 @@
-const basketballWords = ['dribble', 'hoop', 'slam', 'shoot', 'block', 'rebound', 'jumpshot', 'freethrow', 'court', 'jersey'];
+const categories = {
+    sports: ['basketball', 'soccer', 'tennis', 'baseball', 'volleyball'],
+    school: ['teacher', 'student', 'pencil', 'book', 'classroom'],
+    boardgames: ['monopoly', 'scrabble', 'chess', 'risk', 'clue'],
+    videogames: ['minecraft', 'fortnite', 'zelda', 'pokemon', 'fallout'],
+    food: ['pizza', 'burger', 'sushi', 'pasta', 'icecream'],
+    vehicles: ['car', 'bike', 'bus', 'truck', 'plane']
+};
+
+let selectedCategory = 'sports'; // Default category
 let selectedWord = '';
 let guessedWord = [];
 let wrongLetters = [];
 let attempts = 6;
 
 function initializeGame() {
-    selectedWord = getRandomWord(basketballWords);
+    selectedWord = getRandomWord(categories[selectedCategory]);
     guessedWord = Array(selectedWord.length).fill('_');
     wrongLetters = [];
     attempts = 6;
@@ -97,3 +106,9 @@ function endGame(isWinner) {
 
 // Initialize the game when the page loads
 document.addEventListener('DOMContentLoaded', initializeGame);
+
+// Add event listener to category dropdown
+document.getElementById('category-select').addEventListener('change', function() {
+    selectedCategory = this.value;
+    initializeGame();
+});
