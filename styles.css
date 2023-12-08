@@ -1,15 +1,37 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 50px;
+/* Style for the dropdown button */
+.dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
-#wordDisplay {
-  font-size: 24px;
-  margin-bottom: 20px;
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-#letters {
-  font-size: 20px;
-  margin-top: 20px;
+/* Style for the dropdown items */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
