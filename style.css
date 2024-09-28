@@ -44,7 +44,7 @@ nav a:hover {
 
 /* Hero section styles */
 #home {
-    background: url('hero_background.jpg') no-repeat center center/cover; /* Change this to your hero image */
+    background: url('lawn_background.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -64,63 +64,54 @@ nav a:hover {
     animation: fadeIn 2s;
 }
 
-/* About section styles */
-#about {
+/* Section styles */
+section {
     padding: 2rem;
     margin: 1rem 0;
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About section */
+#about {
     text-align: center;
 }
 
-/* Portfolio section styles */
-#portfolio {
-    padding: 2rem;
-    margin: 1rem 0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Services section */
+#services ul {
+    list-style: none;
+    padding: 0;
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.project-card {
+#services li {
     background: #4CAF50;
     color: white;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 1rem;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    animation: fadeIn 0.5s forwards;
 }
 
-.project-card img {
-    width: 100%;
-    border-radius: 8px 8px 0 0;
+/* Testimonials section */
+blockquote {
+    margin: 20px 0;
+    padding: 10px;
+    border-left: 5px solid #4CAF50;
+    background: #eaeaea;
+    border-radius: 5px;
+    position: relative;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
+blockquote cite {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
 }
 
-/* Contact section styles */
-#contact {
-    padding: 2rem;
-    margin: 1rem 0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
+/* Contact section */
 .contact-info {
-    margin-top: 1rem;
+    text-align: center;
 }
 
 /* Animation */
@@ -143,9 +134,5 @@ nav a:hover {
 
     .hero-content p {
         font-size: 1rem;
-    }
-
-    .project-card {
-        width: 90%; /* Full width on small screens */
     }
 }
