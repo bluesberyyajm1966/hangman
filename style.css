@@ -6,17 +6,22 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f0f0f5;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 header {
-    background: #333;
+    background: linear-gradient(90deg, #ff6347, #ff9b47);
     color: #fff;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInFromTop 1s ease-in-out;
 }
 
 nav ul {
@@ -33,6 +38,13 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero {
@@ -40,56 +52,198 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('hero-background.jpg');
+    background: linear-gradient(135deg, #ff6347, #ff9b47);
     background-size: cover;
     background-position: center;
-    position: relative;
-    text-align: center;
     color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: backgroundZoom 10s infinite;
 }
 
 .hero-content {
     animation: fadeIn 2s ease-in-out;
 }
 
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: textSlideUp 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: textSlideUp 1.5s ease-out 0.3s;
+}
+
 .cta {
-    background-color: #ff6347;
-    padding: 0.5rem 1.5rem;
-    color: #fff;
+    background-color: #fff;
+    padding: 0.75rem 2rem;
+    color: #ff6347;
     border: none;
     font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
     cursor: pointer;
     margin-top: 1rem;
-    animation: bounce 2s infinite;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: buttonPulse 2s infinite;
+}
+
+.cta:hover {
+    background-color: #ff9b47;
+    transform: translateY(-5px);
 }
 
 .about, .skills, .projects, .contact {
     padding: 5rem 2rem;
     text-align: center;
+    position: relative;
+}
+
+.about:before, .skills:before, .projects:before, .contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 99, 71, 0.2));
+    z-index: -1;
+    opacity: 0;
+    animation: sectionGlow 3s infinite;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 2rem;
+    animation: textFadeIn 1s ease-in-out;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .skills .skill-list {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
     margin-top: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.project-gallery {
+.skill {
+    background-color: #ff6347;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill:hover {
+    background-color: #ff9b47;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project-gallery {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .project-card {
     background-color: #fff;
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    animation: cardPop 1.2s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-top: 1rem;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.contact {
+    background-color: #ff9b47;
+    color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-top: 4rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+}
+
+.contact a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes fadeIn {
@@ -97,7 +251,33 @@ nav ul li a {
     to { opacity: 1; }
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+@keyframes textFadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes buttonPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes textSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes cardPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes sectionGlow {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.5; }
 }
