@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,11 +27,12 @@
 
         <section class="projects">
             <h2>Projects</h2>
-            <div class="project">
+            <div class="project" onclick="openModal('project1')">
                 <h3>Your Website Title</h3>
                 <p>A brief description of your website. It showcases your skills and creativity.</p>
-                <a href="YOUR_WEBSITE_LINK" target="_blank">View Project</a>
+                <a href="javascript:void(0);" class="modal-link">View Project</a>
             </div>
+            <!-- Add more projects here -->
         </section>
 
         <section class="skills">
@@ -43,7 +45,18 @@
                 <li>Git & GitHub</li>
             </ul>
         </section>
+
+        <button class="back-to-top" onclick="scrollToTop()">⬆️ Back to Top</button>
     </main>
+
+    <div class="modal" id="project1-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project1')">&times;</span>
+            <h2>Your Website Title</h2>
+            <p>Detailed information about your project goes here.</p>
+            <a href="YOUR_WEBSITE_LINK" target="_blank">Visit Project</a>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Daniel Zuckerman. All rights reserved.</p>
