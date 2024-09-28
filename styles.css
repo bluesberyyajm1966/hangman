@@ -12,7 +12,7 @@ body {
 
 header {
     text-align: center;
-    background: linear-gradient(135deg, #007BFF, #00BFFF);
+    background: linear-gradient(135deg, #008080, #FF6F61); /* Teal to Coral gradient */
     color: white;
     padding: 3rem 0;
     position: relative;
@@ -56,7 +56,7 @@ main {
 .project {
     margin: 1rem 0;
     padding: 1rem;
-    background: #e2f0ff;
+    background: #ffe6e6; /* Light Coral */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -72,7 +72,7 @@ main {
     display: inline-block;
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
-    background: #007BFF;
+    background: #008080; /* Teal */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -80,14 +80,14 @@ main {
 }
 
 .project a:hover {
-    background: #0056b3;
+    background: #006666; /* Darker Teal */
 }
 
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007BFF;
+    background: #008080; /* Teal */
     color: white;
     border: none;
     border-radius: 50%;
@@ -99,7 +99,7 @@ main {
 }
 
 .back-to-top:hover {
-    background: #0056b3;
+    background: #006666; /* Darker Teal */
 }
 
 .modal {
@@ -142,7 +142,7 @@ main {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #007BFF;
+    background: #008080; /* Teal */
     color: white;
     position: relative;
     margin-top: 2rem;
